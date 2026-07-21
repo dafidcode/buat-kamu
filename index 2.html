@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semangat Ya Cantik ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(135deg,#ffb6d5,#ffe5ef);
+    overflow:hidden;
+}
+
+.card{
+    width:90%;
+    max-width:430px;
+    background:#fff;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+    position:relative;
+    z-index:2;
+    animation:muncul .8s ease;
+}
+
+h1{
+    color:#ff4f8a;
+    margin-bottom:18px;
+}
+
+p{
+    color:#555;
+    line-height:1.8;
+    font-size:16px;
+}
+
+button{
+    margin-top:25px;
+    padding:13px 30px;
+    border:none;
+    border-radius:30px;
+    background:#ff4f8a;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    background:#ff2f73;
+}
+
+#pesan{
+    margin-top:25px;
+    font-size:18px;
+    font-weight:bold;
+    color:#e91e63;
+    min-height:80px;
+}
+
+.heart{
+    position:absolute;
+    bottom:-30px;
+    color:#ff5d9e;
+    animation:terbang linear forwards;
+}
+
+@keyframes terbang{
+    from{
+        transform:translateY(0) scale(.5);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-120vh) scale(1.6);
+        opacity:0;
+    }
+}
+
+@keyframes muncul{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>💖 Semangat Ya Cantik 💖</h1>
+
+<p>
+aku ngerti kamu lagi haid. 🤍<br><br>
+
+mungkin kamu lagi sakit, pegel, kesel, utawa emosine gampang berubah.
+gapapa ya sayangg, semangatt. 😊<br><br>
+
+gabole dipendem sendiri ya.
+kalo pengin ngeluh, nesu, ato mung pengin ditemani ngobrol,
+mas siap ngrungokke kapan wae. ❤️<br><br>
+
+sing penting kamu istirahat sing cukup,
+gabole telat maem,minum sing akeh.
+kesehatane adek lebih penting dari apa aja. 🌸<br><br>
+
+mas ngerti,mas gaiso ngilangke rasa sakitmu,
+tapiii aku pengin kamu senyum dikitt. 🥺❤️<br><br>
+
+tetep semangat nggih cantik.
+mugo cepet sembuhhh...
+kamuu cepet seger maneh,
+senyum senyum menehhh.
+inget, mas tetep bakal enek buat adek. 🤍🌷
+</p>
+
+<button onclick="tampilPesan()">
+💌 pencet Iki
+</button>
+
+<div id="pesan"></div>
+
+</div>
+
+<script>
+
+const pesan = [
+"🥰 semangat nggih cantik, rasa laramu bakal cepet ilang.",
+"🤍 ojo ngoyo yo, istirahat sing cukup.",
+"❤️ Aaku ngerti kamu lagi ora nyaman, nanging aku yakin kamu kuat.",
+"😊 Senajan lagi haid, menurutku kamu tetep ayu.",
+"🥺 Yen kesel, turu disik nggih.",
+"🍫 Mugo-mugo coklat iso nggawe mood kamu luwih apik.",
+"🌷 Ojo sedih yo, kabeh iki mung sementara.",
+"💕 Aku bakal tetep ngrungokke kabeh ceritamu.",
+"❤️ Cepet mari nggih, aku pengin ndelok kamu mesem maneh.",
+"🤍 Ojo lali ngguyu, senyummu kuwi favoritku.",
+"🥰 Aku mungkin ora iso ngilangke laramu, tapi aku pengin nemenin kamu terus."
+];
+
+function tampilPesan(){
+    let random = Math.floor(Math.random() * pesan.length);
+    document.getElementById("pesan").innerHTML = pesan[random];
+}
+
+// Animasi hati
+setInterval(()=>{
+    const hati = document.createElement("div");
+    hati.className = "heart";
+    hati.innerHTML = ["❤️","💖","💕","💗"][Math.floor(Math.random()*4)];
+    hati.style.left = Math.random()*100 + "vw";
+    hati.style.fontSize = (18 + Math.random()*20) + "px";
+    hati.style.animationDuration = (4 + Math.random()*3) + "s";
+    document.body.appendChild(hati);
+
+    setTimeout(()=>{
+        hati.remove();
+    },7000);
+
+},350);
+
+</script>
+
+</body>
+</html>
