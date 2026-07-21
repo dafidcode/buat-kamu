@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Semangat Ya Cantik ❤️</title>
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9ec4, #ffd6e8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .card {
+      background: white;
+      width: 90%;
+      max-width: 420px;
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+    }
+    
+    h1 {
+      color: #ff4081;
+    }
+    
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      background: #ff4081;
+      color: white;
+      font-size: 17px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background: #e91e63;
+    }
+    
+    #pesan {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #444;
+      min-height: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div class="card">
+    
+    <h1>❤️ Semangat Ya Cantik ❤️</h1>
+    
+    <p>
+      Aku tahu sekarang kamu lagi kurang nyaman.
+      Tapi kamu hebat, kuat, dan pasti bisa melewati semuanya.
+      Mas bakal selalu ada buat kamu. 🌷
+    </p>
+    
+    <button onclick="tampilPesan()">
+      💌 Pencet Iki
+    </button>
+    
+    <div id="pesan"></div>
+    
+  </div>
+  
+  <script>
+    const pesan = [
+      "🥰 Semangat nggih cantik, rasa laramu bakal cepet ilang.",
+      "🤍 Ojo ngoyo yo, istirahat sing cukup.",
+      "❤️ Aku ngerti kamu lagi ora nyaman, nanging aku yakin kamu kuat.",
+      "😊 Senajan lagi haid, menurutku kamu tetep ayu.",
+      "🥺 Yen kesel, turu disik nggih.",
+      "🍫 Mugo-mugo coklat iso nggawe mood kamu luwih apik.",
+      "🌷 Ojo sedih yo, kabeh iki mung sementara.",
+      "💕 Aku bakal tetep ngrungokke kabeh ceritamu.",
+      "❤️ Cepet mari nggih, aku pengin ndelok kamu mesem maneh.",
+      "🤍 Ojo lali ngombe banyu sing akeh.",
+      "🥰 Mas sayang kamu terus."
+    ];
+    
+    function tampilPesan() {
+      let random = Math.floor(Math.random() * pesan.length);
+      document.getElementById("pesan").innerHTML = pesan[random];
+    }
+  </script>
+  
+</body>
+
+</html>
